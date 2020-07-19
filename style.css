@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #dddddd;
+}
+
+.language {
+   float: right;
+   margin: 5px;
+   padding: 10px 10px;
+   padding-right: 48px;
+   border: 2px solid rgb(38, 155, 223);
+   border-radius: 4px;
+   font-family: sans-serif;
+   font-weight: bold;
+   cursor: pointer;
+   transition: box-shadow 300ms;
+   overflow: hidden;
+   position: relative;
+}
+
+.down-arrow {
+    display: inline-block;
+    position: absolute;
+    top: 11px;
+    left: 100px;
+}
+
+.language:hover {
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+}
+
+.paper {
+    margin-top: 50px;
+    width: 1050px;
+    height: 1485px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.kisisel-bilgiler {
+    position: relative;
+}
+
+.fotograf-bolumu {
+    display: inline-block;
+    width: 266px;
+    text-align: center;
+}
+
+#fotograf {
+    display: inline-block;
+    width: 166px;
+    height: 200px;
+    background-color: #dddddd;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    margin: 50px;
+    margin-bottom: 0px !important;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.person-icon {
+    color: #555555;
+    opacity: 0.4;
+    margin-top: 25px;
+    width: 90%;
+    display: inline-block;
+}
+
+.btn-fotograf-yukle {
+    padding: 5px;
+    color: #ffffff;
+    background-color: rgb(38, 155, 223);
+    cursor: pointer;
+    transition: opacity 0.3s;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.btn-fotograf-yukle:hover {
+    opacity: 0.8;
+}
+
+#isim {
+    position: absolute;
+    top: 80px;
+    left: 300px;
+    width: 200px;
+    height: 35px;
+    text-indent: 5px;
+    font-size: large;
+}
