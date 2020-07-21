@@ -6,6 +6,7 @@
 
 body {
     background-color: #dddddd;
+    font-family: sans-serif;
 }
 
 .language {
@@ -15,12 +16,12 @@ body {
    padding-right: 48px;
    border: 2px solid rgb(38, 155, 223);
    border-radius: 4px;
-   font-family: sans-serif;
    font-weight: bold;
    cursor: pointer;
    transition: box-shadow 300ms;
    overflow: hidden;
    position: relative;
+   z-index: 1;
 }
 
 .down-arrow {
@@ -48,11 +49,24 @@ body {
 .kisisel-bilgiler {
     position: relative;
 }
+.kisisel-bilgiler::after {
+    content: "";
+    border: 1px solid rgb(38, 155, 223);
+    width: 90%;
+    height: 2px;
+    position: absolute;
+    bottom: 0%;
+    left: 5%;
+    border-radius: 10px;
+    background: rgb(38, 155, 223);
+}
 
 .fotograf-bolumu {
     display: inline-block;
     width: 266px;
     text-align: center;
+    padding-bottom: 30px;
+    margin-left: 30px;
 }
 
 #fotograf {
@@ -77,24 +91,70 @@ body {
 
 .btn-fotograf-yukle {
     padding: 5px;
-    color: #ffffff;
-    background-color: rgb(38, 155, 223);
+    color: #333333;
+    background-color: transparent;
     cursor: pointer;
     transition: opacity 0.3s;
+    border: 2px solid rgb(38, 155, 223);
     border-radius: 4px;
-    margin-top: 5px;
+    margin-top: 10px;
+    transition: color 300ms, background-color 300ms;
 }
 
 .btn-fotograf-yukle:hover {
-    opacity: 0.8;
+    color: #ffffff;
+    background-color: rgb(38, 155, 223);
+}
+
+.kisisel-bilgiler-bolumu {
+    display: inline-block;
+    margin: 30px;
+    vertical-align: top;
 }
 
 #isim {
-    position: absolute;
-    top: 80px;
-    left: 300px;
-    width: 200px;
-    height: 35px;
     text-indent: 5px;
     font-size: large;
+    text-transform: uppercase;
+    padding: 5px;
+    margin-top: 30px;
+}
+
+#soyisim {
+    margin-left: 20px;
+    margin-top: 30px;
+    font-size: large;
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+.tel-no-div {
+    display: inline-block;
+    margin-top: 40px;
+    width: 49%;
+    font-weight: bold;
+}
+
+.text-input {
+    margin-top: 5px;
+    font-size: 15px;
+    padding: 3px;
+    text-indent: 5px;
+}
+
+.eposta-div {
+    display: inline-block;
+    margin-top: 20px;
+    width: 40%;
+    margin-left: 13px;
+    font-weight: bold;
+}
+
+.adres-div {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#adres {
+    width: 100%;
 }

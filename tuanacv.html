@@ -27,7 +27,7 @@
         </div>
 
         <div class="kisisel-bilgiler">
-            <div>
+            <div class="fotograf-bolumu">
                 <div id="fotograf">
                     <div class="person-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
@@ -41,12 +41,25 @@
                         </svg>
                     </div>
                 </div>
-                <button class="fotograf-yukle">Fotoğraf Yükle</button>
+                <button class="btn-fotograf-yukle">Fotoğraf Yükle</button>
             </div>
-
-            <input type="text" name="isim" id="isim" maxlength="200" value="İsim">
-            <input type="text" name="soyisim" id="soyisim" maxlength="200" value="Soyisim">
-
+            <div class="kisisel-bilgiler-bolumu">
+                <input type="text" name="isim" id="isim" maxlength="200" placeholder="İsim">
+                <input type="text" name="soyisim" id="soyisim" maxlength="200" placeholder="Soyisim">
+                <br>
+                <div class="tel-no-div">
+                    <label for="tel-no">Telefon Numarası</label><br>
+                    <input class="text-input" type="tel" name="telefon-numarasi" id="tel-no" maxlength="17">
+                </div>
+                <div class="eposta-div">
+                    <label for="eposta">E-Posta</label><br>
+                    <input class="text-input" type="email" name="eposta" id="eposta" maxlength="200">
+                </div>
+                <div class="adres-div">
+                    <label for="adres">Adres</label><br>
+                    <input class="text-input" type="text" name="adres" id="adres" maxlength="200">
+                </div>
+            </div>
         </div>
     </div>
 
