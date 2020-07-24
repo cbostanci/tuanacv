@@ -6,16 +6,22 @@
 
 body {
     background-color: #dddddd;
-    font-family: sans-serif;
+    font-family: Calibri;
+}
+
+input:hover {
+    border-color:rgb(38, 155, 223);
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 2px;
 }
 
 .language {
    float: right;
    margin: 5px;
-   padding: 10px 10px;
-   padding-right: 48px;
    border: 2px solid rgb(38, 155, 223);
    border-radius: 4px;
+   font-size: 20px;
    font-weight: bold;
    cursor: pointer;
    transition: box-shadow 300ms;
@@ -29,12 +35,48 @@ body {
     position: absolute;
     top: 11px;
     left: 100px;
+    transition: transform 300ms, top 300ms;
+    transform-origin: 50% 40%;
 }
 
 .language:hover {
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
 }
 
+.tr-dil {
+    display: block;
+    padding: 10px;
+    padding-right: 50px;
+    transition: color 300ms, background-color 300ms;
+}
+
+.tr-dil:hover {
+    background-color: rgb(38, 155, 223);
+    color: #ffffff;
+}
+
+.ing-dil {
+    display: block;
+    padding: 10px;
+    padding-right: 50px;
+    display: none;
+    transition: color 300ms, background-color 300ms;
+}
+
+.ing-dil:hover {
+    background-color: rgb(38, 155, 223);
+    color: #ffffff;
+}
+
+.language:hover .ing-dil{
+    display: block;
+}
+
+.language:hover .down-arrow {
+    top: 58px;
+    left: 113px;
+    transform: rotate(-180deg);
+}
 .paper {
     margin-top: 50px;
     width: 1050px;
@@ -48,17 +90,6 @@ body {
 
 .kisisel-bilgiler {
     position: relative;
-}
-.kisisel-bilgiler::after {
-    content: "";
-    border: 1px solid rgb(38, 155, 223);
-    width: 90%;
-    height: 2px;
-    position: absolute;
-    bottom: 0%;
-    left: 5%;
-    border-radius: 10px;
-    background: rgb(38, 155, 223);
 }
 
 .fotograf-bolumu {
@@ -110,51 +141,80 @@ body {
     display: inline-block;
     margin: 30px;
     vertical-align: top;
+    width: 525px;
 }
 
-#isim {
+#ad-soyad {
     text-indent: 5px;
-    font-size: large;
+    font-size: 30px;
     text-transform: uppercase;
     padding: 5px;
     margin-top: 30px;
-}
-
-#soyisim {
-    margin-left: 20px;
-    margin-top: 30px;
-    font-size: large;
-    text-transform: uppercase;
-    padding: 5px;
+    width: 100%;
 }
 
 .tel-no-div {
-    display: inline-block;
-    margin-top: 40px;
-    width: 49%;
+    margin-top: 20px;
+    width: 50%;
     font-weight: bold;
+    float: left;
 }
 
 .text-input {
     margin-top: 5px;
-    font-size: 15px;
-    padding: 3px;
+    font-size: 20px;
+    padding: 5px;
     text-indent: 5px;
+    width: 95%;
 }
 
 .eposta-div {
-    display: inline-block;
+    position: relative;
     margin-top: 20px;
-    width: 40%;
-    margin-left: 13px;
+    width: 50%;
     font-weight: bold;
+    float: left;
+    text-align: right;
 }
 
 .adres-div {
-    margin-top: 10px;
+    margin-top: 20px;
     font-weight: bold;
+    float: left;
+    width: 100%;
 }
 
 #adres {
     width: 100%;
+}
+
+.bolum-basligi {
+    display: inline-block;
+    margin-left: 20px;
+    padding: 3px 5px;
+    padding-top: 5px;
+    font-size: 20px;
+    border-left: 3px solid rgb(38, 155, 223);
+    border-bottom: 3px solid rgb(38, 155, 223);
+    border-right: 3px solid rgb(38, 155, 223);
+    border-radius: 4px;
+}
+
+.ek-bilgiler {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    height: 500px;
+}
+
+.ek-bilgiler::before {
+    content: "";
+    border: 1px solid rgb(38, 155, 223);
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    border-radius: 10px;
+    background: rgb(38, 155, 223);
 }
