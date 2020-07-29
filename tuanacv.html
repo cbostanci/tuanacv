@@ -72,7 +72,7 @@
             <div class="bolum-basligi" style="margin-left: 300px;">
                 EĞİTİM BİLGİLERİ
             </div>
-            <div style="margin-top: 10px; margin-left: 20px;">
+            <div style="margin-top: 10px; margin-left: 20px; display: inline-block; width: 45%;">
                 <div class="kb">
                     <label for="dogum-tarihi">
                         <p class="kb-baslik">Doğum Tarihi</p>
@@ -102,9 +102,106 @@
                     <input type="text" class="kbinput" name="askerlik" id="askerlik">
                 </div>
             </div>
+
+            <div class="egitim-bilgileri">
+                <div class="okul">
+                    <select name="egitim-durumu" id="egitim-durumu">
+                        <option value="lisans">Lisans</option>
+                        <option value="Ön Lisans">Ön Lisans</option>
+                        <option value="Yüksek Lisans">Yüksek Lisans</option>
+                        <option value="Doktora">Doktora</option>
+                        <option value="Lise">Lise</option>
+                        <option value="İlkokul">İlkokul</option>
+                    </select>
+                    <div class="okul-adi">
+                        <input type="text" id="okul" maxlength="200" placeholder="Okul Adı - Şehir">
+                    </div>
+                    <div class="okul-bolum">
+                        <input type="text" id="bolum" maxlength="200" placeholder="Bölüm">
+                        <select name="mezuniyet" id="mezuniyet">
+                            <option value="mezun">Mezun</option>
+                            <option value="terk">Terk</option>
+                        </select>
+                        <div style="display: inline-block; margin-top: 5px;">
+                            <input type="number" class="yil" min="0" max="9999">
+                            <p class="bosluk"> -</p>
+                            <input type="number" class="yil" min="0" max="9999">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ek-bilgiler" id="is-tecrubeleri">
+            <div class="bolum-basligi">
+                İŞ TECRÜBELERİ
+            </div>
+            <div id="is-tecrubesi">
+                <input type="text" class="kbinput" name="firma-adi" id="firma-adi" placeholder="Firma Adı - Şehir">
+                <input type="text" class="kbinput" name="pozisyon" id="pozisyon" placeholder="Çalışılan Pozisyon">
+                <div style="display:inline-block; margin-left:50px;">
+                    <input type="number" class="yil" min="0" max="9999" style="font-size: 15px;">
+                    <p class="bosluk"> -</p>
+                    <input type="number" class="yil" min="0" max="9999" style="font-size: 15px;">
+                </div>
+            </div>
+        </div>
+        <div class="ek-bilgiler">
+            <div class="bolum-basligi">
+                KURS - SEMİNER - SERTİFİKA
+            </div>
+            <div class="kurs-bolumu">
+                <input type="text" class="kbinput" name="kss-adi" id="kss-adi"
+                    placeholder="Kurs - Seminer - Sertifika Adı">
+                <input type="text" class="kbinput" name="kurum" id="kurum" placeholder="Kurum">
+                <input type="number" class="yil" min="0" max="9999" style="font-size: 15px; margin-left: 50px;">
+            </div>
+        </div>
+        <div class="ek-bilgiler">
+            <div class="bolum-basligi">
+                YABANCI DİL
+            </div>
+            <div class="dil-bolumu">
+                <input type="text" class="kbinput" name="dil" id="dil" placeholder="Dil">
+                <input type="text" class="kbinput" name="seviye" id="seviye" placeholder="Seviye">
+            </div>
+        </div>
+
+        <div class="ek-bilgiler">
+            <div class="bolum-basligi">
+                BİLGİSAYAR BİLGİSİ
+            </div>
+            <div class="dil-bolumu">
+                <input type="text" class="kbinput" name="dil" id="dil" placeholder="Program">
+                <input type="text" class="kbinput" name="seviye" id="seviye" placeholder="Seviye">
+            </div>
+        </div>
+        <div class="ek-bilgiler">
+            <div class="bolum-basligi">
+                HOBİLER VE İLGİ ALANLARI
+            </div>
+        </div>
+        <div class="ek-bilgiler">
+            <div class="bolum-basligi">
+                ÖZET BİLGİ
+            </div>
+        </div>
+        <div class="ek-bilgiler">
+            <div class="bolum-basligi">
+                REFERANSLAR
+            </div>
+        </div>
+        <div class="ekle">
+            +
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <script>
+        $('.ekle').click(function () {
+            $(document.getElementById('is-tecrubesi')).clone().appendTo(document.getElementById('is-tecrubeleri'));
+        });
+    </script>
 
 </body>
 
