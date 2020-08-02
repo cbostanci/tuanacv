@@ -230,6 +230,7 @@ input:focus {
 
 .kb {
     padding: 5px 0px;
+    position: relative;
 }
 
 .kbinput {
@@ -264,6 +265,7 @@ input:focus {
 .okul-adi {
     display: inline-block;
     width: 72%;
+    position: relative;
 }
 
 .okul-bolum {
@@ -290,12 +292,31 @@ input:focus {
 #is-tecrubesi {
     margin-top: 10px;
     margin-left: 40px;
+    position: relative;
 }
 
 #firma-adi {
     font-weight: bold;
     font-size: 15px;
     width: 45%;
+}
+
+.sil-btn {
+    color: white;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: -15px;
+    top: 5px;
+    text-align: center;
+    vertical-align: center;
+    transition: transform 300ms;
+    cursor: pointer;
+}
+
+.sil-btn:hover {
+    transform: scale(1.5);
 }
 
 #pozisyon {
@@ -307,6 +328,7 @@ input:focus {
 .kurs-bolumu {
     margin-top: 10px;
     margin-left: 40px;
+    position: relative;
 }
 
 #kss-adi {
@@ -324,6 +346,7 @@ input:focus {
 .dil-bolumu {
     margin-top: 10px;
     margin-left: 40px;
+    position: relative;
 }
 
 #dil {
