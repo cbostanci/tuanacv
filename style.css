@@ -375,6 +375,10 @@ input:focus {
     background-color: rgb(38, 155, 223);
 }
 
+#bilgisayar-bilgisi {
+    display: none;
+}
+
 #hobiler {
     display: none;
 }
@@ -386,3 +390,45 @@ input:focus {
 #referanslar {
     display: none;
 }
+
+.bolumekle {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+.btn-bolumekle {
+    width: 33%;
+    border: 2px solid rgb(38, 155, 223);
+    border-radius: 4px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 300ms, color 300ms;
+    margin-top: 5px;
+}
+
+.btn-bolumekle:hover {
+    background-color: rgb(38, 155, 223);
+    color: white;
+}
+
+.btn-bolumusil {
+    border: 2px solid rgb(38, 155, 223);
+    border-radius: 50%;
+    fill: black;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    vertical-align: center;
+    text-align: center;
+    cursor: pointer;
+    transition: fill 300ms, background-color 300ms;
+}
+
+.btn-bolumusil:hover {
+    background-color: rgb(38, 155, 223);
+    fill: white;
+}
+
