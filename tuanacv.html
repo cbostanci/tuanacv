@@ -101,13 +101,44 @@
                     </label>
                     <input type="text" class="kbinput" name="ehliyet" id="ehliyet">
                 </div>
-                <div class="kb">
+                <div class="kb ekle-btn" id="askerlik-durumu-ekle-btn">
+                    <p style="display: inline-block;">Askerlik Durumu Ekle</p>
+                    <div style="width: 20px; display: inline-block; position: absolute; right: 260px; top: 5px;">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                            style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                            <g>
+                                <g>
+                                    <path d="M491.841,156.427c-19.471-45.946-51.936-85.013-92.786-112.637C358.217,16.166,308.893-0.007,256,0
+			c-35.254-0.002-68.946,7.18-99.571,20.158C110.484,39.63,71.416,72.093,43.791,112.943C16.167,153.779-0.007,203.104,0,256
+			c-0.002,35.255,7.181,68.948,20.159,99.573c19.471,45.946,51.937,85.013,92.786,112.637C153.783,495.834,203.107,512.007,256,512
+			c35.253,0.002,68.946-7.18,99.571-20.158c45.945-19.471,85.013-51.935,112.638-92.785C495.834,358.22,512.007,308.894,512,256
+			C512.002,220.744,504.819,187.052,491.841,156.427z M460.413,342.257c-16.851,39.781-45.045,73.723-80.476,97.676
+			c-35.443,23.953-78.02,37.926-123.936,37.933c-30.619-0.002-59.729-6.218-86.255-17.454
+			c-39.781-16.851-73.724-45.044-97.677-80.475C48.114,344.495,34.14,301.917,34.133,256c0.002-30.62,6.219-59.731,17.454-86.257
+			c16.851-39.781,45.045-73.724,80.476-97.676C167.506,48.113,210.084,34.14,256,34.133c30.619,0.002,59.729,6.218,86.255,17.454
+			c39.781,16.85,73.724,45.044,97.677,80.475c23.953,35.443,37.927,78.02,37.934,123.939
+			C477.864,286.62,471.648,315.731,460.413,342.257z" />
+                                </g>
+                            </g>
+                            <g>
+                                <g>
+                                    <path
+                                        d="M389.594,239.301H272.699V122.406c0-9.222-7.477-16.699-16.699-16.699c-9.222,0-16.699,7.477-16.699,16.699v116.895
+			H122.406c-9.222,0-16.699,7.477-16.699,16.699s7.477,16.699,16.699,16.699h116.895v116.895c0,9.222,7.477,16.699,16.699,16.699
+			c9.222,0,16.699-7.477,16.699-16.699V272.699h116.895c9.222,0,16.699-7.477,16.699-16.699S398.817,239.301,389.594,239.301z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="kb" id="askerlik-durumu">
                     <label for="askerlik">
                         <p class="kb-baslik">Askerlik Durumu</p>
                         <p style="display: inline-block; margin-left: 40px;">:</p>
                     </label>
                     <input type="text" class="kbinput" name="askerlik" id="askerlik">
-                    <div class="sil-btn" style="right: 40px!important; top: 8px!important;">
+                    <div class="sil-btn" id="askerlik-sil-btn" style="right: 40px!important; top: 8px!important;">
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 315 315"
                             xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 315 315">
                             <g>
@@ -126,7 +157,35 @@
             </div>
 
             <div class="egitim-bilgileri">
-                <div class="okul">
+                <div class="ekle-btn" id="okul-ekle-btn" style="width: 20px; position: absolute; right: 9px; top: 75px;">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                        style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                        <g>
+                            <g>
+                                <path d="M491.841,156.427c-19.471-45.946-51.936-85.013-92.786-112.637C358.217,16.166,308.893-0.007,256,0
+                c-35.254-0.002-68.946,7.18-99.571,20.158C110.484,39.63,71.416,72.093,43.791,112.943C16.167,153.779-0.007,203.104,0,256
+                c-0.002,35.255,7.181,68.948,20.159,99.573c19.471,45.946,51.937,85.013,92.786,112.637C153.783,495.834,203.107,512.007,256,512
+                c35.253,0.002,68.946-7.18,99.571-20.158c45.945-19.471,85.013-51.935,112.638-92.785C495.834,358.22,512.007,308.894,512,256
+                C512.002,220.744,504.819,187.052,491.841,156.427z M460.413,342.257c-16.851,39.781-45.045,73.723-80.476,97.676
+                c-35.443,23.953-78.02,37.926-123.936,37.933c-30.619-0.002-59.729-6.218-86.255-17.454
+                c-39.781-16.851-73.724-45.044-97.677-80.475C48.114,344.495,34.14,301.917,34.133,256c0.002-30.62,6.219-59.731,17.454-86.257
+                c16.851-39.781,45.045-73.724,80.476-97.676C167.506,48.113,210.084,34.14,256,34.133c30.619,0.002,59.729,6.218,86.255,17.454
+                c39.781,16.85,73.724,45.044,97.677,80.475c23.953,35.443,37.927,78.02,37.934,123.939
+                C477.864,286.62,471.648,315.731,460.413,342.257z" />
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <path
+                                    d="M389.594,239.301H272.699V122.406c0-9.222-7.477-16.699-16.699-16.699c-9.222,0-16.699,7.477-16.699,16.699v116.895
+                H122.406c-9.222,0-16.699,7.477-16.699,16.699s7.477,16.699,16.699,16.699h116.895v116.895c0,9.222,7.477,16.699,16.699,16.699
+                c9.222,0,16.699-7.477,16.699-16.699V272.699h116.895c9.222,0,16.699-7.477,16.699-16.699S398.817,239.301,389.594,239.301z" />
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                <div class="okul" id="okul-div">
                     <select name="egitim-durumu" id="egitim-durumu">
                         <option value="lisans">Lisans</option>
                         <option value="Ön Lisans">Ön Lisans</option>
@@ -137,7 +196,7 @@
                     </select>
                     <div class="okul-adi">
                         <input type="text" id="okul" maxlength="200" placeholder="Okul Adı - Şehir">
-                        <div class="sil-btn" style="right: -25px!important;">
+                        <div class="sil-btn" style="right: -25px!important; top: 7px!important;">
                             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 315 315"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 315 315">
                                 <g>
@@ -358,6 +417,7 @@
     </div>
 
     <script src="jquery-3.5.1.min.js"></script>
+    <script src="jspdf.js"></script>
 
     <script>
         $('#btn-bilgisayarbilgekle').click(function () {
@@ -378,6 +438,24 @@
         $('#btn-refekle').click(function () {
             $('#referanslar').css("display", "block");
             $('#btn-refekle').css("display", "none");
+        });
+    </script>
+
+    <script>
+        $('#askerlik-sil-btn').click(function () {
+            $('#askerlik-durumu').css("display", "none");
+            $('#askerlik-durumu-ekle-btn').css("display", "block");
+        });
+
+        $('#askerlik-durumu-ekle-btn').click(function () {
+            $('#askerlik-durumu').css("display", "block");
+            $('#askerlik-durumu-ekle-btn').css("display", "none");
+        });
+    </script>
+
+    <script>
+        $('#okul-ekle-btn').click(function () {
+            $(document.getElementById('okul-div')).clone().insertAfter(document.getElementsByClassName('okul'));
         });
     </script>
 
