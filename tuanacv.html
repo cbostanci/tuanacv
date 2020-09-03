@@ -138,7 +138,7 @@
                         <p style="display: inline-block; margin-left: 40px;">:</p>
                     </label>
                     <input type="text" class="kbinput" name="askerlik" id="askerlik">
-                    <div class="sil-btn" id="askerlik-sil-btn" style="right: 40px!important; top: 8px!important;">
+                    <div class="sil-btn" id="askerlik-sil-btn" style="right: 55px!important; top: 9px!important;">
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 315 315"
                             xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 315 315">
                             <g>
@@ -157,7 +157,8 @@
             </div>
 
             <div class="egitim-bilgileri">
-                <div class="ekle-btn" id="okul-ekle-btn" style="width: 20px; position: absolute; right: 9px; top: 75px;">
+                <div class="ekle-btn" id="okul-ekle-btn"
+                    style="width: 20px; position: absolute; right: 9px; top: 49px;">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
                         style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -185,7 +186,23 @@
                         </g>
                     </svg>
                 </div>
-                <div class="okul" id="okul-div">
+                <div class="sil-btn" id="okul-sil-btn"
+                    style="right: 11px!important; top: 80px!important; visibility: hidden;" onclick="okul_sil($(this))">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 315 315"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 315 315">
+                        <g>
+                            <path
+                                d="m256.774,23.942h-64.836v-6.465c0-9.636-7.744-17.477-17.263-17.477h-34.348c-9.521,0-17.266,7.841-17.266,17.478v6.465h-64.835c-9.619,0-17.445,7.76-17.445,17.297v11.429c0,7.168 4.42,13.33 10.698,15.951 1.989,39.623 13.5,231.193 14.018,239.801 0.222,3.696 3.284,6.58 6.987,6.58h170.033c3.703,0 6.766-2.884 6.987-6.58 0.518-8.607 12.028-200.178 14.018-239.801 6.278-2.621 10.698-8.783 10.698-15.951v-11.43c5.68434e-14-9.537-7.826-17.297-17.446-17.297zm-119.713-6.464c0-1.918 1.465-3.478 3.266-3.478h34.348c1.8,0 3.264,1.56 3.264,3.478v6.465h-40.877v-6.465zm-82.282,23.761c0-1.818 1.546-3.297 3.445-3.297h198.549c1.899,0 3.445,1.478 3.445,3.297v11.429c0,1.819-1.546,3.299-3.445,3.299h-198.548c-1.899,0-3.445-1.479-3.445-3.299v-11.429zm181.143,259.761h-156.848c-2.055-34.247-11.479-191.674-13.51-231.033h183.867c-2.031,39.359-11.454,196.786-13.509,231.033z" />
+                            <path
+                                d="m157.5,95.125c-3.866,0-7,3.134-7,7v176.109c0,3.866 3.134,7 7,7 3.866,0 7-3.134 7-7v-176.109c0-3.866-3.134-7-7-7z" />
+                            <path
+                                d="m110.2,102.04c-0.202-3.86-3.507-6.837-7.355-6.625-3.86,0.201-6.827,3.494-6.625,7.355l9.182,175.829c0.195,3.736 3.285,6.635 6.984,6.635 0.123,0 0.247-0.003 0.371-0.01 3.86-0.201 6.827-3.494 6.625-7.355l-9.182-175.829z" />
+                            <path
+                                d="m212.155,95.415c-3.899-0.223-7.153,2.764-7.355,6.625l-9.184,175.829c-0.202,3.861 2.765,7.154 6.625,7.355 0.125,0.007 0.248,0.01 0.371,0.01 3.698,0 6.789-2.898 6.984-6.635l9.184-175.829c0.202-3.861-2.764-7.154-6.625-7.355z" />
+                        </g>
+                    </svg>
+                </div>
+                <div class="okul" id="okul1-div">
                     <select name="egitim-durumu" id="egitim-durumu">
                         <option value="lisans">Lisans</option>
                         <option value="Ön Lisans">Ön Lisans</option>
@@ -196,21 +213,6 @@
                     </select>
                     <div class="okul-adi">
                         <input type="text" id="okul" maxlength="200" placeholder="Okul Adı - Şehir">
-                        <div class="sil-btn" style="right: -25px!important; top: 7px!important;">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 315 315"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 315 315">
-                                <g>
-                                    <path
-                                        d="m256.774,23.942h-64.836v-6.465c0-9.636-7.744-17.477-17.263-17.477h-34.348c-9.521,0-17.266,7.841-17.266,17.478v6.465h-64.835c-9.619,0-17.445,7.76-17.445,17.297v11.429c0,7.168 4.42,13.33 10.698,15.951 1.989,39.623 13.5,231.193 14.018,239.801 0.222,3.696 3.284,6.58 6.987,6.58h170.033c3.703,0 6.766-2.884 6.987-6.58 0.518-8.607 12.028-200.178 14.018-239.801 6.278-2.621 10.698-8.783 10.698-15.951v-11.43c5.68434e-14-9.537-7.826-17.297-17.446-17.297zm-119.713-6.464c0-1.918 1.465-3.478 3.266-3.478h34.348c1.8,0 3.264,1.56 3.264,3.478v6.465h-40.877v-6.465zm-82.282,23.761c0-1.818 1.546-3.297 3.445-3.297h198.549c1.899,0 3.445,1.478 3.445,3.297v11.429c0,1.819-1.546,3.299-3.445,3.299h-198.548c-1.899,0-3.445-1.479-3.445-3.299v-11.429zm181.143,259.761h-156.848c-2.055-34.247-11.479-191.674-13.51-231.033h183.867c-2.031,39.359-11.454,196.786-13.509,231.033z" />
-                                    <path
-                                        d="m157.5,95.125c-3.866,0-7,3.134-7,7v176.109c0,3.866 3.134,7 7,7 3.866,0 7-3.134 7-7v-176.109c0-3.866-3.134-7-7-7z" />
-                                    <path
-                                        d="m110.2,102.04c-0.202-3.86-3.507-6.837-7.355-6.625-3.86,0.201-6.827,3.494-6.625,7.355l9.182,175.829c0.195,3.736 3.285,6.635 6.984,6.635 0.123,0 0.247-0.003 0.371-0.01 3.86-0.201 6.827-3.494 6.625-7.355l-9.182-175.829z" />
-                                    <path
-                                        d="m212.155,95.415c-3.899-0.223-7.153,2.764-7.355,6.625l-9.184,175.829c-0.202,3.861 2.765,7.154 6.625,7.355 0.125,0.007 0.248,0.01 0.371,0.01 3.698,0 6.789-2.898 6.984-6.635l9.184-175.829c0.202-3.861-2.764-7.154-6.625-7.355z" />
-                                </g>
-                            </svg>
-                        </div>
                     </div>
                     <div class="okul-bolum">
                         <input type="text" id="bolum" maxlength="200" placeholder="Bölüm">
@@ -229,10 +231,46 @@
         </div>
 
         <div class="ek-bilgiler" id="is-tecrubeleri">
+            <div class="ekle-btn" id="is-ekle-btn" style="width: 20px; position: absolute; right: 9px; top: 48px;">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                    style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                    <g>
+                        <g>
+                            <path d="M491.841,156.427c-19.471-45.946-51.936-85.013-92.786-112.637C358.217,16.166,308.893-0.007,256,0
+                c-35.254-0.002-68.946,7.18-99.571,20.158C110.484,39.63,71.416,72.093,43.791,112.943C16.167,153.779-0.007,203.104,0,256
+                c-0.002,35.255,7.181,68.948,20.159,99.573c19.471,45.946,51.937,85.013,92.786,112.637C153.783,495.834,203.107,512.007,256,512
+                c35.253,0.002,68.946-7.18,99.571-20.158c45.945-19.471,85.013-51.935,112.638-92.785C495.834,358.22,512.007,308.894,512,256
+                C512.002,220.744,504.819,187.052,491.841,156.427z M460.413,342.257c-16.851,39.781-45.045,73.723-80.476,97.676
+                c-35.443,23.953-78.02,37.926-123.936,37.933c-30.619-0.002-59.729-6.218-86.255-17.454
+                c-39.781-16.851-73.724-45.044-97.677-80.475C48.114,344.495,34.14,301.917,34.133,256c0.002-30.62,6.219-59.731,17.454-86.257
+                c16.851-39.781,45.045-73.724,80.476-97.676C167.506,48.113,210.084,34.14,256,34.133c30.619,0.002,59.729,6.218,86.255,17.454
+                c39.781,16.85,73.724,45.044,97.677,80.475c23.953,35.443,37.927,78.02,37.934,123.939
+                C477.864,286.62,471.648,315.731,460.413,342.257z" />
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <path
+                                d="M389.594,239.301H272.699V122.406c0-9.222-7.477-16.699-16.699-16.699c-9.222,0-16.699,7.477-16.699,16.699v116.895
+                H122.406c-9.222,0-16.699,7.477-16.699,16.699s7.477,16.699,16.699,16.699h116.895v116.895c0,9.222,7.477,16.699,16.699,16.699
+                c9.222,0,16.699-7.477,16.699-16.699V272.699h116.895c9.222,0,16.699-7.477,16.699-16.699S398.817,239.301,389.594,239.301z" />
+                        </g>
+                    </g>
+                </svg>
+            </div>
             <div class="bolum-basligi">
                 İŞ TECRÜBELERİ
             </div>
-            <div id="is-tecrubesi">
+            <div class="btn-bolumusil" id="btn-isbolumsil">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                    id="Capa_1" x="0px" y="0px" viewBox="0 0 22.88 22.88"
+                    style="enable-background:new 0 0 22.88 22.88; margin: 20%;" xml:space="preserve">
+                    <path
+                        d="M0.324,1.909c-0.429-0.429-0.429-1.143,0-1.587c0.444-0.429,1.143-0.429,1.587,0l9.523,9.539  l9.539-9.539c0.429-0.429,1.143-0.429,1.571,0c0.444,0.444,0.444,1.159,0,1.587l-9.523,9.524l9.523,9.539  c0.444,0.429,0.444,1.143,0,1.587c-0.429,0.429-1.143,0.429-1.571,0l-9.539-9.539l-9.523,9.539c-0.444,0.429-1.143,0.429-1.587,0  c-0.429-0.444-0.429-1.159,0-1.587l9.523-9.539L0.324,1.909z" />
+                </svg>
+            </div>
+            <div class="is-tecrubesi" id="is-tecrubesi1">
                 <input type="text" class="kbinput" name="firma-adi" id="firma-adi" placeholder="Firma Adı - Şehir">
                 <input type="text" class="kbinput" name="pozisyon" id="pozisyon" placeholder="Çalışılan Pozisyon">
                 <div style="display:inline-block; margin-left:50px;">
@@ -240,7 +278,7 @@
                     <p class="bosluk"> -</p>
                     <input type="number" class="yil" min="0" max="9999" style="font-size: 15px;">
                 </div>
-                <div class="sil-btn">
+                <div class="sil-btn" id="istecrubesi-sil-btn" onclick="is_sil($(this))" style="visibility:hidden;">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 315 315"
                         xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 315 315">
                         <g>
@@ -258,7 +296,35 @@
             </div>
         </div>
 
-        <div class="ek-bilgiler">
+        <div class="ek-bilgiler" id="kurs-bolumu">
+            <div class="ekle-btn" id="kurs-ekle-btn" style="width: 20px; position: absolute; right: 9px; top: 48px;">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                    style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                    <g>
+                        <g>
+                            <path d="M491.841,156.427c-19.471-45.946-51.936-85.013-92.786-112.637C358.217,16.166,308.893-0.007,256,0
+                c-35.254-0.002-68.946,7.18-99.571,20.158C110.484,39.63,71.416,72.093,43.791,112.943C16.167,153.779-0.007,203.104,0,256
+                c-0.002,35.255,7.181,68.948,20.159,99.573c19.471,45.946,51.937,85.013,92.786,112.637C153.783,495.834,203.107,512.007,256,512
+                c35.253,0.002,68.946-7.18,99.571-20.158c45.945-19.471,85.013-51.935,112.638-92.785C495.834,358.22,512.007,308.894,512,256
+                C512.002,220.744,504.819,187.052,491.841,156.427z M460.413,342.257c-16.851,39.781-45.045,73.723-80.476,97.676
+                c-35.443,23.953-78.02,37.926-123.936,37.933c-30.619-0.002-59.729-6.218-86.255-17.454
+                c-39.781-16.851-73.724-45.044-97.677-80.475C48.114,344.495,34.14,301.917,34.133,256c0.002-30.62,6.219-59.731,17.454-86.257
+                c16.851-39.781,45.045-73.724,80.476-97.676C167.506,48.113,210.084,34.14,256,34.133c30.619,0.002,59.729,6.218,86.255,17.454
+                c39.781,16.85,73.724,45.044,97.677,80.475c23.953,35.443,37.927,78.02,37.934,123.939
+                C477.864,286.62,471.648,315.731,460.413,342.257z" />
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <path
+                                d="M389.594,239.301H272.699V122.406c0-9.222-7.477-16.699-16.699-16.699c-9.222,0-16.699,7.477-16.699,16.699v116.895
+                H122.406c-9.222,0-16.699,7.477-16.699,16.699s7.477,16.699,16.699,16.699h116.895v116.895c0,9.222,7.477,16.699,16.699,16.699
+                c9.222,0,16.699-7.477,16.699-16.699V272.699h116.895c9.222,0,16.699-7.477,16.699-16.699S398.817,239.301,389.594,239.301z" />
+                        </g>
+                    </g>
+                </svg>
+            </div>
             <div class="bolum-basligi">
                 KURS - SEMİNER - SERTİFİKA
                 <div class="btn-bolumusil" id="btn-kursbolumsil">
@@ -270,12 +336,12 @@
                     </svg>
                 </div>
             </div>
-            <div class="kurs-bolumu">
+            <div class="kurs-bolumu" id="kurs1">
                 <input type="text" class="kbinput" name="kss-adi" id="kss-adi"
                     placeholder="Kurs - Seminer - Sertifika Adı">
                 <input type="text" class="kbinput" name="kurum" id="kurum" placeholder="Kurum">
                 <input type="number" class="yil" min="0" max="9999" style="font-size: 15px; margin-left: 50px;">
-                <div class="sil-btn">
+                <div class="sil-btn" id="kurs-sil-btn" style="visibility: hidden;" onclick="kurs_sil($(this))">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 315 315"
                         xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 315 315">
                         <g>
@@ -293,10 +359,39 @@
             </div>
         </div>
 
-        <div class="ek-bilgiler">
+        <div class="ek-bilgiler" id="yabancidil-bolumu">
+            <div class="ekle-btn" id="yabancidil-ekle-btn"
+                style="width: 20px; position: absolute; right: 9px; top: 48px;">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                    style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                    <g>
+                        <g>
+                            <path d="M491.841,156.427c-19.471-45.946-51.936-85.013-92.786-112.637C358.217,16.166,308.893-0.007,256,0
+                c-35.254-0.002-68.946,7.18-99.571,20.158C110.484,39.63,71.416,72.093,43.791,112.943C16.167,153.779-0.007,203.104,0,256
+                c-0.002,35.255,7.181,68.948,20.159,99.573c19.471,45.946,51.937,85.013,92.786,112.637C153.783,495.834,203.107,512.007,256,512
+                c35.253,0.002,68.946-7.18,99.571-20.158c45.945-19.471,85.013-51.935,112.638-92.785C495.834,358.22,512.007,308.894,512,256
+                C512.002,220.744,504.819,187.052,491.841,156.427z M460.413,342.257c-16.851,39.781-45.045,73.723-80.476,97.676
+                c-35.443,23.953-78.02,37.926-123.936,37.933c-30.619-0.002-59.729-6.218-86.255-17.454
+                c-39.781-16.851-73.724-45.044-97.677-80.475C48.114,344.495,34.14,301.917,34.133,256c0.002-30.62,6.219-59.731,17.454-86.257
+                c16.851-39.781,45.045-73.724,80.476-97.676C167.506,48.113,210.084,34.14,256,34.133c30.619,0.002,59.729,6.218,86.255,17.454
+                c39.781,16.85,73.724,45.044,97.677,80.475c23.953,35.443,37.927,78.02,37.934,123.939
+                C477.864,286.62,471.648,315.731,460.413,342.257z" />
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <path
+                                d="M389.594,239.301H272.699V122.406c0-9.222-7.477-16.699-16.699-16.699c-9.222,0-16.699,7.477-16.699,16.699v116.895
+                H122.406c-9.222,0-16.699,7.477-16.699,16.699s7.477,16.699,16.699,16.699h116.895v116.895c0,9.222,7.477,16.699,16.699,16.699
+                c9.222,0,16.699-7.477,16.699-16.699V272.699h116.895c9.222,0,16.699-7.477,16.699-16.699S398.817,239.301,389.594,239.301z" />
+                        </g>
+                    </g>
+                </svg>
+            </div>
             <div class="bolum-basligi">
                 YABANCI DİL
-                <div class="btn-bolumusil" id="btn-kursbolumsil">
+                <div class="btn-bolumusil" id="btn-yabancidilbolumsil">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
                         id="Capa_1" x="0px" y="0px" viewBox="0 0 22.88 22.88"
                         style="enable-background:new 0 0 22.88 22.88; margin: 20%;" xml:space="preserve">
@@ -305,10 +400,11 @@
                     </svg>
                 </div>
             </div>
-            <div class="dil-bolumu">
+            <div class="dil-bolumu" id="dil1">
                 <input type="text" class="kbinput" name="dil" id="dil" placeholder="Dil">
-                <input type="text" class="kbinput" name="seviye" id="seviye" placeholder="Seviye">
-                <div class="sil-btn" style="right: 480px;!important">
+                <input type="text" class="kbinput" name="dil-seviye" id="dil-seviye" placeholder="Seviye">
+                <div class="sil-btn" id="yabancidil-sil-btn" style="visibility: hidden;"
+                    onclick="yabancidil_sil($(this))">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 315 315"
                         xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 315 315">
                         <g>
@@ -327,9 +423,38 @@
         </div>
 
         <div class="ek-bilgiler" id="bilgisayar-bilgisi">
+            <div class="ekle-btn" id="bilgisayar-ekle-btn"
+                style="width: 20px; position: absolute; right: 9px; top: 48px;">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                    style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                    <g>
+                        <g>
+                            <path d="M491.841,156.427c-19.471-45.946-51.936-85.013-92.786-112.637C358.217,16.166,308.893-0.007,256,0
+                c-35.254-0.002-68.946,7.18-99.571,20.158C110.484,39.63,71.416,72.093,43.791,112.943C16.167,153.779-0.007,203.104,0,256
+                c-0.002,35.255,7.181,68.948,20.159,99.573c19.471,45.946,51.937,85.013,92.786,112.637C153.783,495.834,203.107,512.007,256,512
+                c35.253,0.002,68.946-7.18,99.571-20.158c45.945-19.471,85.013-51.935,112.638-92.785C495.834,358.22,512.007,308.894,512,256
+                C512.002,220.744,504.819,187.052,491.841,156.427z M460.413,342.257c-16.851,39.781-45.045,73.723-80.476,97.676
+                c-35.443,23.953-78.02,37.926-123.936,37.933c-30.619-0.002-59.729-6.218-86.255-17.454
+                c-39.781-16.851-73.724-45.044-97.677-80.475C48.114,344.495,34.14,301.917,34.133,256c0.002-30.62,6.219-59.731,17.454-86.257
+                c16.851-39.781,45.045-73.724,80.476-97.676C167.506,48.113,210.084,34.14,256,34.133c30.619,0.002,59.729,6.218,86.255,17.454
+                c39.781,16.85,73.724,45.044,97.677,80.475c23.953,35.443,37.927,78.02,37.934,123.939
+                C477.864,286.62,471.648,315.731,460.413,342.257z" />
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <path
+                                d="M389.594,239.301H272.699V122.406c0-9.222-7.477-16.699-16.699-16.699c-9.222,0-16.699,7.477-16.699,16.699v116.895
+                H122.406c-9.222,0-16.699,7.477-16.699,16.699s7.477,16.699,16.699,16.699h116.895v116.895c0,9.222,7.477,16.699,16.699,16.699
+                c9.222,0,16.699-7.477,16.699-16.699V272.699h116.895c9.222,0,16.699-7.477,16.699-16.699S398.817,239.301,389.594,239.301z" />
+                        </g>
+                    </g>
+                </svg>
+            </div>
             <div class="bolum-basligi">
                 BİLGİSAYAR BİLGİSİ
-                <div class="btn-bolumusil" id="btn-kursbolumsil">
+                <div class="btn-bolumusil" id="btn-bilgisayarbolumsil">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
                         id="Capa_1" x="0px" y="0px" viewBox="0 0 22.88 22.88"
                         style="enable-background:new 0 0 22.88 22.88; margin: 20%;" xml:space="preserve">
@@ -338,10 +463,11 @@
                     </svg>
                 </div>
             </div>
-            <div class="dil-bolumu">
-                <input type="text" class="kbinput" name="dil" id="dil" placeholder="Program">
-                <input type="text" class="kbinput" name="seviye" id="seviye" placeholder="Seviye">
-                <div class="sil-btn" style="right: 480px;!important">
+            <div class="dil-bolumu" id="bilgisayar1">
+                <input type="text" class="kbinput" name="program" id="program" placeholder="Program">
+                <input type="text" class="kbinput" name="prog-seviye" id="prog-seviye" placeholder="Seviye">
+                <div class="sil-btn" style="visibility: hidden;" id="bilgisayar-sil-btn"
+                    onclick="bilgisayar_sil($(this))">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 315 315"
                         xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 315 315">
                         <g>
@@ -362,7 +488,7 @@
         <div class="ek-bilgiler" id="hobiler">
             <div class="bolum-basligi">
                 HOBİLER VE İLGİ ALANLARI
-                <div class="btn-bolumusil" id="btn-kursbolumsil">
+                <div class="btn-bolumusil" id="btn-hobilerbolumsil">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
                         id="Capa_1" x="0px" y="0px" viewBox="0 0 22.88 22.88"
                         style="enable-background:new 0 0 22.88 22.88; margin: 20%;" xml:space="preserve">
@@ -371,12 +497,14 @@
                     </svg>
                 </div>
             </div>
+            <br>
+            <textarea name="hobiler" class="yazialani" id="text-hobiler" cols="50" rows="5"></textarea>
         </div>
 
         <div class="ek-bilgiler" id="ozetbilgi">
             <div class="bolum-basligi">
                 ÖZET BİLGİ
-                <div class="btn-bolumusil" id="btn-kursbolumsil">
+                <div class="btn-bolumusil" id="btn-ozetbolumsil">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
                         id="Capa_1" x="0px" y="0px" viewBox="0 0 22.88 22.88"
                         style="enable-background:new 0 0 22.88 22.88; margin: 20%;" xml:space="preserve">
@@ -385,12 +513,14 @@
                     </svg>
                 </div>
             </div>
+            <br>
+            <textarea name="ozetbilgiler" class="yazialani" id="text-ozetbilgi" cols="50" rows="5"></textarea>
         </div>
 
         <div class="ek-bilgiler" id="referanslar">
             <div class="bolum-basligi">
                 REFERANSLAR
-                <div class="btn-bolumusil" id="btn-kursbolumsil">
+                <div class="btn-bolumusil" id="btn-referanslarbolumsil">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
                         id="Capa_1" x="0px" y="0px" viewBox="0 0 22.88 22.88"
                         style="enable-background:new 0 0 22.88 22.88; margin: 20%;" xml:space="preserve">
@@ -399,8 +529,32 @@
                     </svg>
                 </div>
             </div>
+            <br>
+            <div class="dil-bolumu" id="referans1">
+                <input type="text" class="kbinput" name="refadsoyad" id="refadsoyad" placeholder="Ad Soyad"
+                    style="width: 25%; font-weight: bold;">
+                <input type="text" class="kbinput" name="reffirma" id="reffirma" placeholder="Çalıştığı Firma"
+                    style="width: 40%;">
+                <input type="text" class="kbinput" name="refpozisyon" id="refpozisyon" placeholder="Pozisyon"
+                    style="width: 25%;">
+                <br>
+                <div style="text-align: right; padding-right: 83px;">
+                    <input type="text" class="kbinput" name="refeposta" id="refeposta" placeholder="E-Posta"
+                        style="margin-top: 5px; width: 30%;">
+                    <input type="text" class="kbinput" name="reftelefon" id="reftelefon" placeholder="Telefon">
+                </div>
+            </div>
         </div>
         <div class="bolumekle">
+            <div class="btn-bolumekle" id="btn-istecrubeleriekle" style="display: none;">
+                İŞ TECRÜBELERİ EKLE
+            </div>
+            <div class="btn-bolumekle" id="btn-kursbolumekle" style="display: none;">
+                KURS SEMİNER SERTİFİKA EKLE
+            </div>
+            <div class="btn-bolumekle" id="btn-yabancidilbolumekle" style="display: none;">
+                YABANCI DİL EKLE
+            </div>
             <div class="btn-bolumekle" id="btn-bilgisayarbilgekle">
                 BİLGİSAYAR BİLGİSİ EKLE
             </div>
@@ -420,6 +574,18 @@
     <script src="jspdf.js"></script>
 
     <script>
+        $('#btn-istecrubeleriekle').click(function () {
+            $('#is-tecrubeleri').css('display', 'block');
+            $('#btn-istecrubeleriekle').css('display', 'none');
+        });
+        $('#btn-kursbolumekle').click(function () {
+            $('#kurs-bolumu').css('display', 'block');
+            $('#btn-kursbolumekle').css('display', 'none');
+        });
+        $('#btn-yabancidilbolumekle').click(function () {
+            $('#yabancidil-bolumu').css('display', 'block');
+            $('#btn-yabancidilbolumekle').css('display', 'none');
+        });
         $('#btn-bilgisayarbilgekle').click(function () {
             $('#bilgisayar-bilgisi').css("display", "block");
             $('#btn-bilgisayarbilgekle').css("display", "none");
@@ -442,6 +608,43 @@
     </script>
 
     <script>
+        $('#btn-isbolumsil').click(function () {
+            $(document.getElementById('is-tecrubeleri')).css('display', 'none');
+            $('#btn-istecrubeleriekle').css('display', 'inline-block');
+        });
+
+        $('#btn-kursbolumsil').click(function () {
+            $(document.getElementById('kurs-bolumu')).css('display', 'none');
+            $('#btn-kursbolumekle').css('display', 'inline-block');
+        });
+
+        $('#btn-yabancidilbolumsil').click(function () {
+            $(document.getElementById('yabancidil-bolumu')).css('display', 'none');
+            $('#btn-yabancidilbolumekle').css('display', 'inline-block');
+        });
+
+        $('#btn-bilgisayarbolumsil').click(function () {
+            $(document.getElementById('bilgisayar-bilgisi')).css('display', 'none');
+            $('#btn-bilgisayarbilgekle').css('display', 'inline-block');
+        });
+
+        $('#btn-hobilerbolumsil').click(function () {
+            $(document.getElementById('hobiler')).css('display', 'none');
+            $('#btn-hobiekle').css('display', 'inline-block');
+        });
+
+        $('#btn-ozetbolumsil').click(function () {
+            $(document.getElementById('ozetbilgi')).css('display', 'none');
+            $('#btn-ozetekle').css('display', 'inline-block');
+        });
+
+        $('#btn-referanslarbolumsil').click(function () {
+            $(document.getElementById('referanslar')).css('display', 'none');
+            $('#btn-refekle').css('display', 'inline-block');
+        });
+    </script>
+
+    <script>
         $('#askerlik-sil-btn').click(function () {
             $('#askerlik-durumu').css("display", "none");
             $('#askerlik-durumu-ekle-btn').css("display", "block");
@@ -454,12 +657,109 @@
     </script>
 
     <script>
+        var okul_count = 1;
+        var empty_okul = $(document.getElementById('okul1-div')).clone();
         $('#okul-ekle-btn').click(function () {
-            $(document.getElementById('okul-div')).clone().insertAfter(document.getElementsByClassName('okul'));
+            $(empty_okul).clone().insertAfter(document.getElementById('okul' + okul_count + '-div')).prop('id', 'okul' + (okul_count + 1) + '-div');
+            $(document.getElementById('okul-sil-btn')).css('visibility', 'visible');
+            okul_count += 1;
         });
+
+        function okul_sil(x) {
+            if (okul_count != 1) {
+                $(document.getElementById('okul' + okul_count + '-div')).remove();
+                okul_count -= 1;
+            }
+
+            if (okul_count == 1) {
+                $(document.getElementById('okul-sil-btn')).css('visibility', 'hidden');
+            }
+        }
     </script>
 
+    <script>
+        var is_count = 1;
+        var empty_is = $(document.getElementById('is-tecrubesi1')).clone();
+        $('#is-ekle-btn').click(function () {
+            $(empty_is).clone().insertAfter(document.getElementById('is-tecrubesi' + is_count)).prop('id', 'is-tecrubesi' + (is_count + 1));
+            $(document.getElementById('istecrubesi-sil-btn')).css('visibility', 'visible');
+            is_count += 1;
+        });
 
+        function is_sil(x) {
+            if (is_count != 1) {
+                $(document.getElementById('is-tecrubesi' + is_count)).remove();
+                is_count -= 1;
+            }
+
+            if (is_count == 1) {
+                $(document.getElementById('istecrubesi-sil-btn')).css('visibility', 'hidden');
+            }
+        }
+    </script>
+
+    <script>
+        var kurs_count = 1;
+        var empty_kurs = $(document.getElementById('kurs1')).clone();
+        $('#kurs-ekle-btn').click(function () {
+            $(empty_kurs).clone().insertAfter(document.getElementById('kurs' + kurs_count)).prop('id', 'kurs' + (kurs_count + 1));
+            $(document.getElementById('kurs-sil-btn')).css('visibility', 'visible');
+            kurs_count += 1;
+        });
+
+        function kurs_sil(x) {
+            if (kurs_count != 1) {
+                $(document.getElementById('kurs' + kurs_count)).remove();
+                kurs_count -= 1;
+            }
+
+            if (kurs_count == 1) {
+                $(document.getElementById('kurs-sil-btn')).css('visibility', 'hidden');
+            }
+        }
+    </script>
+
+    <script>
+        var dil_count = 1;
+        var empty_dil = $(document.getElementById('dil1')).clone();
+        $('#yabancidil-ekle-btn').click(function () {
+            $(empty_dil).clone().insertAfter(document.getElementById('dil' + dil_count)).prop('id', 'dil' + (dil_count + 1));
+            $(document.getElementById('yabancidil-sil-btn')).css('visibility', 'visible');
+            dil_count += 1;
+        });
+
+        function yabancidil_sil(x) {
+            if (dil_count != 1) {
+                $(document.getElementById('dil' + dil_count)).remove();
+                dil_count -= 1;
+            }
+
+            if (dil_count == 1) {
+                $(document.getElementById('yabancidil-sil-btn')).css('visibility', 'hidden');
+            }
+        }
+    </script>
+
+    <script>
+        var bilgisayar_count = 1;
+        var empty_bilgisayar = $(document.getElementById('bilgisayar1')).clone();
+        $('#bilgisayar-ekle-btn').click(function () {
+            $(empty_bilgisayar).clone().insertAfter(document.getElementById('bilgisayar' + bilgisayar_count)).prop('id', 'bilgisayar' + (bilgisayar_count + 1));
+            $(document.getElementById('bilgisayar-sil-btn')).css('visibility', 'visible');
+            bilgisayar_count += 1;
+        });
+
+        function bilgisayar_sil(x) {
+            if (bilgisayar_count != 1) {
+                $(document.getElementById('bilgisayar' + bilgisayar_count)).remove();
+                bilgisayar_count -= 1;
+            }
+
+            if (bilgisayar_count == 1) {
+                $(document.getElementById('bilgisayar-sil-btn')).css('visibility', 'hidden');
+            }
+        }
+    </script>
 </body>
 
 </html>
