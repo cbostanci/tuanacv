@@ -39,7 +39,6 @@
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
                             x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000"
                             xml:space="preserve">
-                            <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
                             <g>
                                 <path
                                     d="M990,968.3c-34.2-181.3-165.5-327.9-338.5-382.9c95.9-53.2,160.8-155.5,160.8-273c0-172.3-139.7-312-312-312c-172.3,0-312,139.7-312,312c0,117.4,64.9,219.7,160.8,273C179.2,639.4,48.8,781.6,11.7,958.2c-0.9,2.5-1.4,5.2-1.6,8c-0.1,0.7,0.1,1.4-0.1,2.1l0,0c0,17.2,14,31.2,31.2,31.2c17.2,0,31.2-14,31.2-31.2l0,0c42.6-196.6,218.5-343.8,427.8-343.8c209.3,0,384.7,147.2,427.4,343.8l0,0c0.3,17,14.1,30.6,31.2,30.6S989.7,985.3,990,968.3L990,968.3z M250.6,312.5c0-137.9,111.8-249.6,249.6-249.6c137.9,0,249.6,111.8,249.6,249.6c0,137.9-111.8,249.6-249.6,249.6S250.6,450.4,250.6,312.5z" />
@@ -54,11 +53,11 @@
                 <br>
                 <div class="tel-no-div">
                     <label for="tel-no">Telefon Numarası</label><br>
-                    <input class="text-input" type="tel" name="telefon-numarasi" id="tel-no" maxlength="17">
+                    <input class="text-input telefon-no" type="tel" name="telefon-numarasi" id="tel-no" maxlength="17">
                 </div>
                 <div class="eposta-div">
                     <label for="eposta" style="position: absolute; left: 6%;">E-Posta</label><br>
-                    <input class="text-input" type="email" name="eposta" id="eposta" maxlength="200">
+                    <input class="text-input eposta" type="text" name="eposta" id="eposta" maxlength="200">
                 </div>
                 <div class="adres-div">
                     <label for="adres">Adres</label><br>
@@ -92,7 +91,7 @@
                         <p class="kb-baslik">Uyruk</p>
                         <p style="display: inline-block; margin-left: 40px;">:</p>
                     </label>
-                    <input type="text" class="kbinput" name="uyruk" id="uyruk">
+                    <input type="text" class="kbinput" name="uyruk" id="uyruk" value="T.C.">
                 </div>
                 <div class="kb">
                     <label for="ehliyet">
@@ -220,10 +219,10 @@
                             <option value="mezun">Mezun</option>
                             <option value="terk">Terk</option>
                         </select>
-                        <div style="display: inline-block; margin-top: 5px;">
-                            <input type="number" class="yil" min="0" max="9999">
+                        <div style="display: inline-block; margin-top: 5px;" id="app">
+                            <input type="text" class="yil">
                             <p class="bosluk"> -</p>
-                            <input type="number" class="yil" min="0" max="9999">
+                            <input type="text" class="yil">
                         </div>
                     </div>
                 </div>
@@ -274,9 +273,9 @@
                 <input type="text" class="kbinput" name="firma-adi" id="firma-adi" placeholder="Firma Adı - Şehir">
                 <input type="text" class="kbinput" name="pozisyon" id="pozisyon" placeholder="Çalışılan Pozisyon">
                 <div style="display:inline-block; margin-left:50px;">
-                    <input type="number" class="yil" min="0" max="9999" style="font-size: 15px;">
+                    <input type="text" class="yil" style="font-size: 15px;">
                     <p class="bosluk"> -</p>
-                    <input type="number" class="yil" min="0" max="9999" style="font-size: 15px;">
+                    <input type="text" class="yil" style="font-size: 15px;">
                 </div>
                 <div class="sil-btn" id="istecrubesi-sil-btn" onclick="is_sil($(this))" style="visibility:hidden;">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 315 315"
@@ -340,7 +339,7 @@
                 <input type="text" class="kbinput" name="kss-adi" id="kss-adi"
                     placeholder="Kurs - Seminer - Sertifika Adı">
                 <input type="text" class="kbinput" name="kurum" id="kurum" placeholder="Kurum">
-                <input type="number" class="yil" min="0" max="9999" style="font-size: 15px; margin-left: 50px;">
+                <input type="text" class="yil" style="font-size: 15px; margin-left: 60px;">
                 <div class="sil-btn" id="kurs-sil-btn" style="visibility: hidden;" onclick="kurs_sil($(this))">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 315 315"
                         xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 315 315">
@@ -518,6 +517,35 @@
         </div>
 
         <div class="ek-bilgiler" id="referanslar">
+            <div class="ekle-btn" id="referans-ekle-btn"
+                style="width: 20px; position: absolute; right: 9px; top: 48px;">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                    style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                    <g>
+                        <g>
+                            <path d="M491.841,156.427c-19.471-45.946-51.936-85.013-92.786-112.637C358.217,16.166,308.893-0.007,256,0
+                c-35.254-0.002-68.946,7.18-99.571,20.158C110.484,39.63,71.416,72.093,43.791,112.943C16.167,153.779-0.007,203.104,0,256
+                c-0.002,35.255,7.181,68.948,20.159,99.573c19.471,45.946,51.937,85.013,92.786,112.637C153.783,495.834,203.107,512.007,256,512
+                c35.253,0.002,68.946-7.18,99.571-20.158c45.945-19.471,85.013-51.935,112.638-92.785C495.834,358.22,512.007,308.894,512,256
+                C512.002,220.744,504.819,187.052,491.841,156.427z M460.413,342.257c-16.851,39.781-45.045,73.723-80.476,97.676
+                c-35.443,23.953-78.02,37.926-123.936,37.933c-30.619-0.002-59.729-6.218-86.255-17.454
+                c-39.781-16.851-73.724-45.044-97.677-80.475C48.114,344.495,34.14,301.917,34.133,256c0.002-30.62,6.219-59.731,17.454-86.257
+                c16.851-39.781,45.045-73.724,80.476-97.676C167.506,48.113,210.084,34.14,256,34.133c30.619,0.002,59.729,6.218,86.255,17.454
+                c39.781,16.85,73.724,45.044,97.677,80.475c23.953,35.443,37.927,78.02,37.934,123.939
+                C477.864,286.62,471.648,315.731,460.413,342.257z" />
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <path
+                                d="M389.594,239.301H272.699V122.406c0-9.222-7.477-16.699-16.699-16.699c-9.222,0-16.699,7.477-16.699,16.699v116.895
+                H122.406c-9.222,0-16.699,7.477-16.699,16.699s7.477,16.699,16.699,16.699h116.895v116.895c0,9.222,7.477,16.699,16.699,16.699
+                c9.222,0,16.699-7.477,16.699-16.699V272.699h116.895c9.222,0,16.699-7.477,16.699-16.699S398.817,239.301,389.594,239.301z" />
+                        </g>
+                    </g>
+                </svg>
+            </div>
             <div class="bolum-basligi">
                 REFERANSLAR
                 <div class="btn-bolumusil" id="btn-referanslarbolumsil">
@@ -532,16 +560,32 @@
             <br>
             <div class="dil-bolumu" id="referans1">
                 <input type="text" class="kbinput" name="refadsoyad" id="refadsoyad" placeholder="Ad Soyad"
-                    style="width: 25%; font-weight: bold;">
+                    style="width: 30%; font-weight: bold; font-size: 15px;">
                 <input type="text" class="kbinput" name="reffirma" id="reffirma" placeholder="Çalıştığı Firma"
-                    style="width: 40%;">
+                    style="width: 40%; font-size: 15px;">
                 <input type="text" class="kbinput" name="refpozisyon" id="refpozisyon" placeholder="Pozisyon"
-                    style="width: 25%;">
+                    style="width: 23%; font-size: 15px; text-align: center;">
                 <br>
-                <div style="text-align: right; padding-right: 83px;">
-                    <input type="text" class="kbinput" name="refeposta" id="refeposta" placeholder="E-Posta"
+                <div style="text-align: left; padding-right: 83px;">
+                    <input type="text" class="kbinput telefon-no" name="reftelefon" id="reftelefon"
+                        placeholder="Telefon">
+                    <input type="text" class="kbinput eposta" name="refeposta" id="refeposta" placeholder="E-Posta"
                         style="margin-top: 5px; width: 30%;">
-                    <input type="text" class="kbinput" name="reftelefon" id="reftelefon" placeholder="Telefon">
+                </div>
+                <div class="sil-btn" style="visibility: hidden;" id="referans-sil-btn" onclick="referans_sil($(this))">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 315 315"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 315 315">
+                        <g>
+                            <path
+                                d="m256.774,23.942h-64.836v-6.465c0-9.636-7.744-17.477-17.263-17.477h-34.348c-9.521,0-17.266,7.841-17.266,17.478v6.465h-64.835c-9.619,0-17.445,7.76-17.445,17.297v11.429c0,7.168 4.42,13.33 10.698,15.951 1.989,39.623 13.5,231.193 14.018,239.801 0.222,3.696 3.284,6.58 6.987,6.58h170.033c3.703,0 6.766-2.884 6.987-6.58 0.518-8.607 12.028-200.178 14.018-239.801 6.278-2.621 10.698-8.783 10.698-15.951v-11.43c5.68434e-14-9.537-7.826-17.297-17.446-17.297zm-119.713-6.464c0-1.918 1.465-3.478 3.266-3.478h34.348c1.8,0 3.264,1.56 3.264,3.478v6.465h-40.877v-6.465zm-82.282,23.761c0-1.818 1.546-3.297 3.445-3.297h198.549c1.899,0 3.445,1.478 3.445,3.297v11.429c0,1.819-1.546,3.299-3.445,3.299h-198.548c-1.899,0-3.445-1.479-3.445-3.299v-11.429zm181.143,259.761h-156.848c-2.055-34.247-11.479-191.674-13.51-231.033h183.867c-2.031,39.359-11.454,196.786-13.509,231.033z" />
+                            <path
+                                d="m157.5,95.125c-3.866,0-7,3.134-7,7v176.109c0,3.866 3.134,7 7,7 3.866,0 7-3.134 7-7v-176.109c0-3.866-3.134-7-7-7z" />
+                            <path
+                                d="m110.2,102.04c-0.202-3.86-3.507-6.837-7.355-6.625-3.86,0.201-6.827,3.494-6.625,7.355l9.182,175.829c0.195,3.736 3.285,6.635 6.984,6.635 0.123,0 0.247-0.003 0.371-0.01 3.86-0.201 6.827-3.494 6.625-7.355l-9.182-175.829z" />
+                            <path
+                                d="m212.155,95.415c-3.899-0.223-7.153,2.764-7.355,6.625l-9.184,175.829c-0.202,3.861 2.765,7.154 6.625,7.355 0.125,0.007 0.248,0.01 0.371,0.01 3.698,0 6.789-2.898 6.984-6.635l9.184-175.829c0.202-3.861-2.764-7.154-6.625-7.355z" />
+                        </g>
+                    </svg>
                 </div>
             </div>
         </div>
@@ -572,6 +616,14 @@
 
     <script src="jquery-3.5.1.min.js"></script>
     <script src="jspdf.js"></script>
+    <script src="cleave.js"></script>
+    <script src="cleave-phone.tr.js"></script>
+    <script src="jquery.inputmask.js"></script>
+
+    <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="monthpicker/src/MonthPicker.css">
+    <script src="monthpicker/src/MonthPicker.js"></script>
 
     <script>
         $('#btn-istecrubeleriekle').click(function () {
@@ -663,6 +715,7 @@
             $(empty_okul).clone().insertAfter(document.getElementById('okul' + okul_count + '-div')).prop('id', 'okul' + (okul_count + 1) + '-div');
             $(document.getElementById('okul-sil-btn')).css('visibility', 'visible');
             okul_count += 1;
+            $('.yil').MonthPicker({ StartYear: (new Date).getFullYear(), ShowIcon: false });
         });
 
         function okul_sil(x) {
@@ -684,6 +737,7 @@
             $(empty_is).clone().insertAfter(document.getElementById('is-tecrubesi' + is_count)).prop('id', 'is-tecrubesi' + (is_count + 1));
             $(document.getElementById('istecrubesi-sil-btn')).css('visibility', 'visible');
             is_count += 1;
+            $('.yil').MonthPicker({ StartYear: (new Date).getFullYear(), ShowIcon: false });
         });
 
         function is_sil(x) {
@@ -705,6 +759,7 @@
             $(empty_kurs).clone().insertAfter(document.getElementById('kurs' + kurs_count)).prop('id', 'kurs' + (kurs_count + 1));
             $(document.getElementById('kurs-sil-btn')).css('visibility', 'visible');
             kurs_count += 1;
+            $('.yil').MonthPicker({ StartYear: (new Date).getFullYear(), ShowIcon: false });
         });
 
         function kurs_sil(x) {
@@ -759,6 +814,46 @@
                 $(document.getElementById('bilgisayar-sil-btn')).css('visibility', 'hidden');
             }
         }
+    </script>
+
+    <script>
+        var referans_count = 1;
+        var empty_referans = $(document.getElementById('referans1')).clone();
+        $('#referans-ekle-btn').click(function () {
+            $(empty_referans).clone().insertAfter(document.getElementById('referans' + referans_count)).prop('id', 'referans' + (referans_count + 1));
+            $(document.getElementById('referans-sil-btn')).css('visibility', 'visible');
+            referans_count += 1;
+        });
+
+        function referans_sil(x) {
+            if (referans_count != 1) {
+                $(document.getElementById('referans' + referans_count)).remove();
+                referans_count -= 1;
+            }
+
+            if (referans_count == 1) {
+                $(document.getElementById('referans-sil-btn')).css('visibility', 'hidden');
+            }
+        }
+    </script>
+
+    <script>
+        $('#dogum-tarihi').datepicker({
+            monthNames: ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"],
+            monthNamesShort: ["Oca", "Şub", "Mar", "Nis", "May", "Haz", "Tem", "Ağu", "Eyl", "Eki", "Kas", "Ara"],
+            dayNamesMin: ["Pa", "Pt", "Sl", "Ça", "Pe", "Cu", "Ct"],
+            changeYear: true,
+            changeMonth: true,
+            dateFormat: "dd / mm / yy",
+            yearRange: "1900:c",
+            firstDay: 1
+        });
+        $('.yil').MonthPicker({ StartYear: (new Date).getFullYear(), ShowIcon: false });
+    </script>
+
+    <script>
+        $('.telefon-no').inputmask({ "mask": "0(999) 999 9999" });
+        $('.eposta').inputmask({ alias: "email" })
     </script>
 </body>
 
