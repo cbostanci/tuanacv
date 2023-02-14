@@ -1,1 +1,1 @@
-Resume creation webpage for Tuana Game Center in Bergama/İZMİR.
+Fast resume creation web application.
